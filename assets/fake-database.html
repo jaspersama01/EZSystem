@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Discord Violation Center</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" href="https://discord.com/assets/847541504914fd33810e70a0ea73177e.ico">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .pulse { animation: pulse 2s infinite; }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
+    .glow {
+      animation: glow 1.5s ease-in-out infinite alternate;
+    }
+    @keyframes glow {
+      from { text-shadow: 0 0 5px red; }
+      to { text-shadow: 0 0 15px red; }
+    }
+    .sidebar {
+      background-color: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+<body class="bg-[#2b2d31] text-white p-6">
+  <!-- Navigation Bar with Sidebar Toggle -->
+  <div class="flex items-center mb-2">
+    <button id="menuBtn" class="text-white mr-4">☰</button>
+    <img src="https://cdn.worldvectorlogo.com/logos/discord-logo-color-wordmark-1.svg" class="h-8 w-auto">
+  </div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="hidden fixed top-0 left-0 h-full w-60 sidebar p-4 backdrop-blur-md z-50">
+    <button id="closeSidebar" class="text-white text-xl absolute top-2 right-2">✕</button>
+    <ul class="space-y-3 mt-10">
+      <li>
+        <button class="w-full text-left px-4 py-2 rounded-lg bg-[#3f4147] hover:bg-[#4e5057] transition text-white font-semibold shadow-sm">
+          🗃️ Fake Discord Database
+        </button>
+      </li>
+      <li>
+        <button class="w-full text-left px-4 py-2 rounded-lg bg-[#3f4147] hover:bg-[#4e5057] transition text-white font-semibold shadow-sm">
+          📄 Fake Proof Policy
+        </button>
+      </li>
+      <li>
+        <button class="w-full text-left px-4 py-2 rounded-lg bg-[#3f4147] hover:bg-[#4e5057] transition text-white font-semibold shadow-sm">
+          🗑️ Fake Deletion
+        </button>
+      </li>
+      <li>
+        <button class="w-full text-left px-4 py-2 rounded-lg bg-[#3f4147] hover:bg-[#4e5057] transition text-white font-semibold shadow-sm">
+          💸 Refund Process
+        </button>
+      </li>
+      <li>
+        <button class="w-full text-left px-4 py-2 rounded-lg bg-[#3f4147] hover:bg-[#4e5057] transition text-white font-semibold shadow-sm">
+          📜 Fake Certificate
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Fake Discord Topbar -->
+  <div class="bg-[#1e1f22] h-12 flex items-center justify-start px-4 mb-6 shadow-md">
+    <span class="text-white font-semibold text-sm">⚠ Violation Center — Review Required for take052</span>
+  </div>
+
+  <div class="max-w-2xl mx-auto space-y-6">
+    <div class="bg-red-600 text-white text-center p-2 rounded pulse font-semibold shadow-lg">⚠ Immediate Action Required — Validation Needed to Prevent Permanent Suspension</div>
+
+    <!-- Input and Buttons -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <input type="text" value="take052" readonly class="bg-[#1e1f22] p-2 rounded text-white border border-[rgb(135,134,134)] cursor-not-allowed">
+      <button id="validateBtn" class="bg-[rgb(106,108,255)] hover:bg-indigo-500 transition px-4 py-2 rounded-lg text-white shadow-md font-semibold text-sm">
+        <svg id="spinner" class="hidden animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z"></path>
+        </svg>
+        <span id="validateText">Proceed to Validation</span>
+      </button>
+      <input type="text" value="take052" readonly class="bg-[#1e1f22] p-2 rounded text-white border border-[rgb(135,134,134)] cursor-not-allowed">
+      <button class="bg-[rgb(106,108,255)] hover:bg-indigo-500 transition px-4 py-2 rounded-lg text-white shadow-md font-semibold text-sm">Finalize Permanent Ban</button>
+    </div>
+
+    <!-- Account Standing -->
+    <div class="bg-[#1e1f22] p-4 rounded-lg shadow-md border-l-4 border-[#4f545c] mt-10">
+      <div class="flex items-center gap-4">
+        <img src="https://pbs.twimg.com/profile_images/1797704293136633859/1Yz0kJu__400x400.jpg" alt="avatar" class="w-[7rem] h-[7rem] rounded-full border-4 border-[rgb(135,134,134)]">
+        <div>
+          <p class="text-xl font-bold" style="color: rgb(237 234 231);">⚠️ Banflex's account is <span class="text-orange-400">TEMPORARY SUSPENDED</span></p>
+          <p class="text-sm text-gray-300 mt-1">This action was taken due to repeated violations of <a href="#" class="text-blue-400 underline">Discord's Terms of Service</a> and <a href="#" class="text-blue-400 underline">Community Guidelines</a>. You must verify your identity to appeal and reinstate your account. Neglecting to take action may result in permanent suspension or data removal.</p>
+        </div>
+      </div>
+      <div class="mt-8">
+        <div class="flex justify-between text-sm text-gray-400 mb-1">
+          <span>All Good</span>
+          <span>Limited</span>
+          <span>Very Limited</span>
+          <span class="text-orange-400">Temporary Suspended</span>
+          <span class="text-red-500">Suspended</span>
+        </div>
+        <div class="w-full h-2 bg-gray-700 rounded-full relative">
+          <div class="absolute left-[75%] w-4 h-4 bg-orange-400 rounded-full top-[-4px] border border-black"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Violations -->
+    <div class="bg-[#1e1f22] p-4 rounded-lg border border-[rgb(135,134,134)] shadow-md mt-10">
+      <h3 class="uppercase text-sm mb-4 font-bold" style="color: rgb(237 234 231);">⚠️ Active Violations Detected</h3>
+      <div class="bg-[#313338] p-3 rounded mb-2 border-l-4 border-red-500">
+        <p class="text-xl font-bold" style="color: rgb(237 234 231);">
+          ⚫ ACTIVE VIOLATIONS — 2
+        </p>
+        <p class="text-sm text-gray-400">Your account's safety and visibility are currently restricted due to unresolved violations.</p>
+      </div>
+      <div class="bg-[#313338] p-3 rounded mb-2 border-l-4 border-[#9fa6b2]">
+        <p class="font-semibold" style="color: rgb(237 234 231);">
+          ⚠️ Illegal Purchase / Fraud Activity
+        </p>
+        <p class="text-sm text-gray-400">Violation expires on: <strong class="text-white">Feb 09, 2056</strong></p>
+        <span class="bg-[rgb(61,42,241)] text-xs px-2 py-1 rounded-full font-bold">NEW</span>
+      </div>
+      <div class="bg-[#313338] p-3 rounded border-l-4 border-orange-500 mb-2">
+        <p class="text-xl font-semibold text-orange-300">
+          ⚫ Multiple Reports Detected
+        </p>
+        <p class="text-sm text-gray-400">Excessive abuse or harassment complaints. Requires human validation to review appeal status.</p>
+        <span class="bg-[rgb(61,42,241)] text-xs px-2 py-1 rounded-full font-bold">NEW</span>
+      </div>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="bg-[#1e1f22] mt-8 p-4 rounded-lg border border-[#4f545c] shadow-md text-center">
+      <p class="text-[#9fa6b2] font-bold mb-2">⏳ Time Remaining Before Permanent Suspension</p>
+      <div id="timer" class="text-3xl font-mono text-white glow">01:00:00</div>
+    </div>
+  </div>
+
+  <script>
+    let seconds = 3600;
+    const timerElement = document.getElementById("timer");
+    const countdown = setInterval(() => {
+      seconds--;
+      const hrs = String(Math.floor(seconds / 3600)).padStart(2, '0');
+      const mins = String(Math.floor((seconds % 3600) / 60)).padStart(2, '0');
+      const secs = String(seconds % 60).padStart(2, '0');
+      timerElement.textContent = `${hrs}:${mins}:${secs}`;
+      if (seconds <= 0) {
+        clearInterval(countdown);
+        timerElement.textContent = "ACCOUNT LOCKED";
+        timerElement.classList.add("text-red-500", "text-xl");
+      }
+    }, 1000);
+
+    const validateBtn = document.getElementById('validateBtn');
+    const validateText = document.getElementById('validateText');
+    const spinner = document.getElementById('spinner');
+
+    validateBtn.addEventListener('click', () => {
+      spinner.classList.remove('hidden');
+      validateText.textContent = "Validating...";
+      validateBtn.disabled = true;
+      setTimeout(() => {
+        validateText.textContent = "Validation Failed: Appeal Required";
+        spinner.classList.add('hidden');
+        validateBtn.classList.remove('bg-[rgb(106,108,255)]');
+        validateBtn.classList.add('bg-red-600');
+      }, 3000);
+    });
+
+    const menuBtn = document.getElementById('menuBtn');
+    const sidebar = document.getElementById('sidebar');
+    const closeSidebar = document.getElementById('closeSidebar');
+
+    menuBtn.addEventListener('click', () => {
+      sidebar.classList.remove('hidden');
+    });
+
+    closeSidebar.addEventListener('click', () => {
+      sidebar.classList.add('hidden');
+    });
+  </script>
+</body>
+</html>
